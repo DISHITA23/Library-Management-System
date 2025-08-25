@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Home Page</title>
+
+  <meta name="viewport" content="width=device-width , initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <style>
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                  url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    .hero h4 {
+      font-weight: 300;
+      font-size: 1.2rem;
+    }
+    .btn-custom {
+      border: 2px solid #fff;
+      padding: 0.7rem 1.7rem;
+      border-radius: 50px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    .btn-custom:hover {
+      background: #fff;
+      color: #C33764;
+    }
+
+    /* Features Section */
+    #best-features {
+      padding: 80px 0;
+      background: #f9f9f9;
+    }
+    #best-features h2 {
+      font-weight: 700;
+      margin-bottom: 50px;
+      color: #333;
+    }
+    .feature-box {
+      padding: 40px 20px;
+      border-radius: 15px;
+      background: #fff;
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+    .feature-box:hover {
+      background: #fff;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+      transform: translateY(-7px);
+    }
+    .feature-box i {
+      font-size: 2.8rem;
+      color: #C33764;
+      margin-bottom: 20px;
+    }
+
+    /* CTA Section */
+    .cta {
+      background: linear-gradient(135deg, #1D2671, #C33764);
+      color: #fff;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .cta h2 {
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .cta p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+    .cta .btn-light {
+      border-radius: 30px;
+      padding: 0.8rem 2rem;
+      font-weight: 600;
+    }
+
+    /* Footer */
+    footer {
+      background: #0c0c0c;
+      color: #aaa;
+      padding: 50px 0 20px;
+    }
+    footer h5 {
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    footer a {
+      color: #aaa;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    footer a:hover {
+      color: #fff;
+    }
+    .social-icons i {
+      font-size: 1.3rem;
+      margin: 0 12px;
+      transition: 0.3s;
+    }
+    .social-icons i:hover {
+      color: #C33764;
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <div th:insert="fragments/header :: header"></div>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="container">
+      <h2>Learning Never Stops</h2>
+      <hr class="bg-light w-25 mx-auto my-4">
+      <h4>Trusted by 500,000+ learners worldwide with an average rating of 4.9+</h4>
+      <div class="mt-4">
+        <button type="button" class="btn btn-custom">
+          Read More <i class="fa-solid fa-book ms-2"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Features Section -->
+  <section id="best-features" class="text-center">
+    <div class="container">
+      <h2 class="mb-5">Our Best Features</h2>
+      <div class="row justify-content-center mb-4">
+        <div class="col-md-8">
+          <p class="text-muted">
+            Explore what makes us stand out: expertise, quality, and seamless support designed with you in mind.
+          </p>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="feature-box shadow-sm">
+            <i class="fa-solid fa-briefcase"></i>
+            <h4 class="my-3">Experience</h4>
+            <p class="text-muted">Our seasoned team brings years of knowledge and hands-on expertise.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="feature-box shadow-sm">
+            <i class="fa-solid fa-star"></i>
+            <h4 class="my-3">Quality</h4>
+            <p class="text-muted">We guarantee top-notch resources, carefully curated to meet your needs.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="feature-box shadow-sm">
+            <i class="fa-solid fa-bolt"></i>
+            <h4 class="my-3">Seamless</h4>
+            <p class="text-muted">Enjoy a hassle-free process tailored for simplicity and convenience.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <div class="container">
+      <h2>Ready to Start Your Journey?</h2>
+      <p>Join thousands of learners who trust us to deliver quality education and lifelong value.</p>
+      <a href="#" class="btn btn-light">
+        Get Started <i class="fa-solid fa-arrow-right ms-2"></i>
+      </a>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer style="background-color: #1e2022; color: #fff; padding: 40px 0; text-align: center;">
+  <div class="container">
+    <div style="display: flex; justify-content: space-around; flex-wrap: wrap; text-align: center;">
+
+      <!-- About Us -->
+      <div style="flex: 1; min-width: 250px; margin: 15px;">
+        <h5 style="color: #FFFFFF; font-weight: bold; margin-bottom: 15px;">ABOUT US</h5>
+        <p style="max-width: 300px; margin: auto;">
+          We empower learners through high-quality resources and a passion for lifelong education.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div style="flex: 1; min-width: 250px; margin: 15px;">
+        <h5 style="color: #FFFFFF; font-weight: bold; margin-bottom: 15px;">QUICK LINKS</h5>
+        <ul style="list-style: none; padding: 0;">
+          <li><a href="#" style="color: #fff; text-decoration: none;">Home</a></li>
+          <li><a href="#" style="color: #fff; text-decoration: none;">Features</a></li>
+          <li><a href="#" style="color: #fff; text-decoration: none;">Pricing</a></li>
+          <li><a href="#" style="color: #fff; text-decoration: none;">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Follow Us -->
+      <div style="flex: 1; min-width: 250px; margin: 15px;">
+        <h5 style="color: #FFFFFF; font-weight: bold; margin-bottom: 15px;">FOLLOW US</h5>
+        <p><a href="https://github.com/DISHITA23" target="_blank" style="color:#fff; text-decoration:none;"><i class="fab fa-github"></i> GitHub</a></p>
+        <p><a href="https://www.linkedin.com/in/dishita-modi-a44bba288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" style="color:#fff; text-decoration:none;"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
+        <p><a href="mailto:dishitamodi04@gmail.com" style="color:#fff; text-decoration:none;"><i class="fas fa-envelope"></i> dishitamodi04@gmail.com</a></p>
+        <p><a href="tel:+919876543219" style="color:#fff; text-decoration:none;"><i class="fas fa-phone"></i> +91 9876543219</a></p>
+      </div>
+    </div>
+
+    <hr style="border-color: rgba(255,255,255,0.2); margin: 20px 0;">
+    <p style="margin: 0; font-size: 14px;">© 2025 All Rights Reserved by <span style="color: #f1c40f;">Dishita Modi</span></p>
+  </div>
+</footer>
+
+<!-- FontAwesome for icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
