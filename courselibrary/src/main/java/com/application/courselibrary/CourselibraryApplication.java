@@ -39,7 +39,7 @@ public class CourselibraryApplication {
 				book2.addPublisher(publisher2);
 				bookService.createBook(book2);
 
-				Book book3=new Book("9789386235657", "Programming and Problem Solving with Python", "My Third Book");
+				Book book3=new Book("9789386235657", "Programming and Problem Solving with Python", "Step-by-step Python with examples and exercises.");
 				Author author3=new Author("Ashok Namdev Kamthane, Amit Ashok Kamthane", "Step-by-step Python with examples and exercises.");
 				Category category3=new Category("Python Programming Books");
 				Publisher publisher3=new Publisher("McGraw Hill India");
